@@ -45,7 +45,7 @@ The system automatically downloads the YOLOv8 nano model (`yolov8n.pt`) on first
 ### Starting the Application
 
 ```bash
-python main.py
+python AI Vehicle Counting System.py
 ```
 
 The application will launch on `http://localhost:7862`
