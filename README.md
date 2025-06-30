@@ -17,6 +17,14 @@ The AI Vehicle Counting System is an advanced computer vision application that a
 
 ### Prerequisites
 
+Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Or install manually:
+
 ```bash
 pip install gradio
 pip install ultralytics
@@ -84,7 +92,7 @@ def count_vehicles(video_file, x1, y1, x2, y2, progress)
 def analyze_folder_images(image_folder_path)
 def create_results_chart(count_up, count_down)
 ```
-- AI-powered vehicle identification using GPT-4V
+- AI-powered vehicle identification using GPT-4O
 - Statistical visualization
 - Color and model distribution analysis
 
@@ -247,52 +255,10 @@ fourcc = cv2.VideoWriter_fourcc(*'H264')  # Video compression
 
 ## 📊 Output Format
 
-### Text Results
-```
-✅ Video processing completed!
-
-📊 Results:
-- Vehicles going up: X
-- Vehicles going down: Y
-- Total vehicles: Z
-
-🎯 Processing details:
-- Frames processed: N
-- Frame rate: F fps
-- Processing duration: T seconds
-```
-
 ### Visual Outputs
 1. **Statistics Chart**: Bar chart showing directional counts
 2. **Analytics Chart**: Color and model distribution
 3. **Processed Video**: Annotated video with tracking visualization
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-#### Video Format Errors
-- **Solution**: Convert video to supported format (MP4 recommended)
-- **Tools**: FFmpeg, VLC Media Player
-
-#### Model Loading Issues
-- **Solution**: Ensure internet connection for initial model download
-- **Path**: Models stored in `~/.cache/ultralytics/`
-
-#### API Errors
-- **Solution**: Verify OpenAI API key and quota
-- **Fallback**: System continues without analytics if API fails
-
-#### Memory Issues
-- **Solution**: Process shorter videos or reduce video resolution
-- **Monitoring**: Check available RAM during processing
-
-### Performance Tips
-
-1. **Video Optimization**: Use lower resolution videos for faster processing
-2. **Line Placement**: Position counting line strategically for better accuracy
-3. **Lighting Conditions**: Better lighting improves detection accuracy
-4. **Camera Angle**: Frontal/side views work better than top-down views
 
 ---
 
